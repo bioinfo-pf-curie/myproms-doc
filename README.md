@@ -1,2 +1,0 @@
-# myproms-doc
-myProMS documentation
