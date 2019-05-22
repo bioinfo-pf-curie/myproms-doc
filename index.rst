@@ -11,12 +11,18 @@ Welcome to myproms's documentation!
 	:caption: Connection
    
 	docs/connection
+	
+.. toctree::
+	:maxdepth: 3
+	:caption: Users management
+	:hidden:
+   
+	docs/users_management
+
 
 
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
