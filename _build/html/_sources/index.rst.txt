@@ -18,6 +18,13 @@ Welcome to myproms's documentation!
 	:hidden:
    
 	docs/users_management
+	
+.. toctree::
+	:maxdepth: 3
+	:caption: Projects
+   
+	docs/project_access
+	docs/project_management
 
 
 
