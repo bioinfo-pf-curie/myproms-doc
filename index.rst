@@ -14,7 +14,7 @@ Welcome to myproms's documentation!
 	
 .. toctree::
 	:maxdepth: 3
-	:caption: Users management
+	:caption: Users
 	:hidden:
    
 	docs/users_management

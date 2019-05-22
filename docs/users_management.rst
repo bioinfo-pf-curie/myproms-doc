@@ -1,5 +1,3 @@
-.. _users_management:
-
 Users management
 ================
 
