@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis validation &mdash; myProMS  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Analysis import" href="analysis_import.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> myProMS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#git-repository">Git Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#docker-deployment">Docker deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/server_architecture.html">Server Architecture</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Server Management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/users_management.html">Users management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/users_management.html#user-classes-and-access-privileges">User classes and access privileges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/users_management.html#account-management">Account management</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Project management</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project_settings.html">Projects settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project_settings.html#selection">Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_settings.html#creation">Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_settings.html#accessibility">Accessibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_settings.html#organization">Organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project_settings.html#experiments"><strong>Experiments</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project_settings.html#samples"><strong>Samples</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="project_settings.html#analyses"><strong>Analyses</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="project_settings.html#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project_settings.html#life-span">Life span</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_import.html">Analysis import</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis_import.html#supported-search-engines">Supported search engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_import.html#collecting-search-files">Collecting search files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_import.html#import-parameters-mascot-proteome-discoverer-and-x-tandem">Import parameters (Mascot, Proteome Discoverer and X!Tandem)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_import.html#importing-maxquant-data">Importing MaxQuant data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_import.html#import-dia-data">Import DIA data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="analysis_import.html#from-peakview">From PeakView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis_import.html#from-openswath">From OpenSWATH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis_import.html#running-openswath-quantification">Running OpenSWATH quantification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analysis_import.html#from-spectronaut">From Spectronaut</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="analysis_import.html#analysis-summary">Analysis summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis validation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#automated-peptide-protein-validation">Automated peptide/protein validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fdr-false-discovery-rate-based-validation">FDR (False discovery rate) - based validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#qualitative-validation">Qualitative validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comparative-validation">Comparative validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#validation-templates">Validation templates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-peptide-protein-validation">Manual peptide/protein validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#peptides-selection-exclusion">Peptides selection/exclusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#protein-exclusion-and-filtering">Protein exclusion and filtering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lower-scoring-peptides-activation">Lower-scoring peptides activation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clear-peptide-protein-selections">Clear peptide/protein selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sequence-modification-validation">Sequence modification validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#phosphorylation-sites-validation-with-phosphors">Phosphorylation sites validation with PhosphoRS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-validation-of-modifications">Manual validation of modifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#validation-traceability">Validation traceability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reporting">Reporting</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">myProMS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis validation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/docs/project_management/analysis_validation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-validation">
+<h1>Analysis validation<a class="headerlink" href="#analysis-validation" title="Permalink to this headline">¶</a></h1>
+<p>Search result data associated with an Analysis must be validated before being accessible by end-user for further interpretation.
+Data processing of Analysis data is a multi-step process.</p>
+<dl class="docutils">
+<dt>Analyses icons are color-coded based on their data processing status to help users to easily determine the validation level of each of them:</dt>
+<dd><ul class="first last simple">
+<li><img alt="validation_not_completed" src="../../_images/analysis_validation_not_completed.gif" /> : Protein annotation import not yet completed.</li>
+<li><img alt="validation_not_validated" src="../../_images/analysis_validation_not_validated.gif" /> : Data not yet validated.</li>
+<li><img alt="validation_partially_validated" src="../../_images/analysis_validation_partially_validated.gif" /> : Data partially validated.</li>
+<li><img alt="validation_validated" src="../../_images/analysis_validation_validated.gif" /> : Data validated and reported.</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Protein annotation import from the databank file(s) is not part of the validation process.
+It is triggered as a background task immediately after search result data import.
+This process can take several minutes depending on the number of proteins identified.
+However, validated data cannot be reported (see the Reporting section below for more details) before protein annotation data import has been completed.</p>
+</div>
+<div class="section" id="automated-peptide-protein-validation">
+<h2>Automated peptide/protein validation<a class="headerlink" href="#automated-peptide-protein-validation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fdr-false-discovery-rate-based-validation">
+<h3>FDR (False discovery rate) - based validation<a class="headerlink" href="#fdr-false-discovery-rate-based-validation" title="Permalink to this headline">¶</a></h3>
+<p>FDR-based validation is initiated at the data import step to filter out data below the corresponding threshold score (see <a class="reference internal" href="analysis_import.html#analysis-import"><span class="std std-ref">Analysis import</span></a>).</p>
+</div>
+<div class="section" id="qualitative-validation">
+<h3>Qualitative validation<a class="headerlink" href="#qualitative-validation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="comparative-validation">
+<h3>Comparative validation<a class="headerlink" href="#comparative-validation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="validation-templates">
+<h3>Validation templates<a class="headerlink" href="#validation-templates" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="manual-peptide-protein-validation">
+<h2>Manual peptide/protein validation<a class="headerlink" href="#manual-peptide-protein-validation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="peptides-selection-exclusion">
+<h3>Peptides selection/exclusion<a class="headerlink" href="#peptides-selection-exclusion" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="protein-exclusion-and-filtering">
+<h3>Protein exclusion and filtering<a class="headerlink" href="#protein-exclusion-and-filtering" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="lower-scoring-peptides-activation">
+<h2>Lower-scoring peptides activation<a class="headerlink" href="#lower-scoring-peptides-activation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="clear-peptide-protein-selections">
+<h2>Clear peptide/protein selections<a class="headerlink" href="#clear-peptide-protein-selections" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sequence-modification-validation">
+<h2>Sequence modification validation<a class="headerlink" href="#sequence-modification-validation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="phosphorylation-sites-validation-with-phosphors">
+<h3>Phosphorylation sites validation with PhosphoRS<a class="headerlink" href="#phosphorylation-sites-validation-with-phosphors" title="Permalink to this headline">¶</a></h3>
+<p><strong>PhosphoRS</strong> <a class="footnote-reference" href="#id2" id="id1">[1]</a> is an algorithm used to determine phosphorylation positions on a peptide, based on its sequence and MS2 fragmentation spectrum.
+This tool is included into myProMS and can be used to correct imported phosphorylation data.
+From “Process analyses” menu, select <cite>Peptide/Protein Selection</cite> process type, and click on <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">PhosphoRS</span> <span class="pre">analysis</span></code>.</p>
+<p>The following form is then displayed:</p>
+<p>&lt;Figure phosphoRS form&gt;</p>
+<p>PhosphoRS parameters can be set in <cite>PhosphoRS Analysis Rules</cite> section:
+- :
+- <strong>Activation type</strong>: select the fragmentation mechanism of the analysis instrument. PhosphoRS is optimized for each activation type.
+- <strong>Mass Deviation</strong>: mass error tolerance when PhosphoRS matches experimental spectra with theoretical spectra.</p>
+</div>
+<div class="section" id="manual-validation-of-modifications">
+<h3>Manual validation of modifications<a class="headerlink" href="#manual-validation-of-modifications" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="validation-traceability">
+<h2>Validation traceability<a class="headerlink" href="#validation-traceability" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="reporting">
+<h2>Reporting<a class="headerlink" href="#reporting" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>PhosphoRS: <a class="reference external" href="http://pubs.acs.org/doi/abs/10.1021/pr200611n">T. Taus et al., J. Proteome Res., 2011</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="analysis_import.html" class="btn btn-neutral float-left" title="Analysis import" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Patrick Poullet, Valentin Sabatet, Victor Laigle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
