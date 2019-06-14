@@ -23,6 +23,8 @@ Projects are then listed together with the items that were matched during the se
 Once listed, click on the ``Open`` button to go to the selected project.
 
 
+.. _project_creation:
+
 Creation
 --------
 

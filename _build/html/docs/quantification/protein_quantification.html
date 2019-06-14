@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Protein Quantification &mdash; myProMS  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PTMs quantification" href="ptms_quantification.html" />
+    <link rel="prev" title="Peptide Quantification" href="peptide_quantification.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> myProMS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#git-repository">Git Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#docker-deployment">Docker deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/server_architecture.html">Server Architecture</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Server Management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/users_management.html">Users management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/users_management.html#user-classes-and-access-privileges">User classes and access privileges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/users_management.html#account-management">Account management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/annotation_data.html">Annotation data management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#sequence-databanks">Sequence databanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#databank-types">Databank types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#listing-databanks">Listing databanks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#adding-a-new-databank">Adding a new databank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#editing-a-databank">Editing a databank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#deleting-a-databank">Deleting a databank</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#spectral-swath-libraries-management">Spectral (SWATH) libraries management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#listing-spectral-libraries">Listing spectral libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#adding-a-new-library">Adding a new library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#merging-two-library">Merging two library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#editing-a-library">Editing a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#updating-a-library">Updating a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#restoring-the-previous-version-of-a-library">Restoring the previous version of a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#searching-for-proteins-in-a-library">Searching for proteins in a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#exporting-a-library">Exporting a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#deleting-a-spectral-library">Deleting a spectral library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#go-files-management">GO files management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#ontology-files">Ontology files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#annotation-files">Annotation files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#species">Species</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#listing-species">Listing species</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#adding-or-editing-a-species">Adding or editing a species</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#deleting-a-species">Deleting a species</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#sequence-modifications">Sequence modifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#editing-or-merging-ptms">Editing or merging PTMs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/server_administration.html">Server administration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Project management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/project_settings.html">Projects settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#selection">Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#creation">Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#accessibility">Accessibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#organization">Organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/project_settings.html#experiments"><strong>Experiments</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/project_settings.html#samples"><strong>Samples</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/project_settings.html#analyses"><strong>Analyses</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#life-span">Life span</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/analysis_import.html">Analysis import</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#supported-search-engines">Supported search engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#collecting-search-files">Collecting search files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#import-parameters-mascot-proteome-discoverer-and-x-tandem">Import parameters (Mascot, Proteome Discoverer and X!Tandem)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#importing-maxquant-data">Importing MaxQuant data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#import-dia-data">Import DIA data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#from-peakview">From PeakView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#from-openswath">From OpenSWATH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#running-openswath-quantification">Running OpenSWATH quantification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#from-spectronaut">From Spectronaut</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#analysis-summary">Analysis summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/analysis_validation.html">Analysis validation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#automated-peptide-protein-validation">Automated peptide/protein validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#fdr-false-discovery-rate-based-validation">FDR (False discovery rate) - based validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#qualitative-validation">Qualitative validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#comparative-validation">Comparative validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#validation-templates">Validation templates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#manual-peptide-protein-validation">Manual peptide/protein validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#peptides-selection-exclusion">Peptides selection/exclusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#protein-exclusion-and-filtering">Protein exclusion and filtering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#lower-scoring-peptides-activation">Lower-scoring peptides activation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#clear-peptide-protein-selections">Clear peptide/protein selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#sequence-modification-validation">Sequence modification validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#phosphorylation-sites-validation-with-phosphors">Phosphorylation sites validation with PhosphoRS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#manual-validation-of-modifications">Manual validation of modifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#validation-traceability">Validation traceability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#reporting">Reporting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/biological_samples.html">Biological Samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#properties">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#treatments">Treatments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#recording-a-biological-sample">Recording a biological sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#linking-biological-samples-to-ms-analyses">Linking biological samples to MS Analyses</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Protein Identification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../protein_identification/validated_proteins.html">Validated proteins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/validated_proteins.html#match-groups-and-protein-visibility">Match groups and protein visibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../protein_identification/validated_proteins.html#top-protein-selection-rules">Top protein selection rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../protein_identification/validated_proteins.html#project-wide-protein-visibility-rules">Project-wide protein visibility rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../protein_identification/validated_proteins.html#checking-for-conflicting-match-groups">Checking for conflicting match groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../protein_identification/validated_proteins.html#displaying-match-group-composition">Displaying match group composition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../protein_identification/validated_proteins.html#manual-edition">Manual edition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../protein_identification/validated_proteins.html#peptide-distribution-in-match-group">Peptide distribution in match group</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/validated_proteins.html#identifier-mapping">Identifier mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/validated_proteins.html#single-protein-view">Single protein view</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../protein_identification/protein_lists.html">Protein lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/protein_lists.html#project-based-protein-lists">Project-based protein lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/protein_lists.html#user-defined-protein-lists">User-defined protein lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/protein_lists.html#export-protein-lists">Export protein lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../protein_identification/search_proteins.html">Search for proteins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../protein_identification/compare_proteins.html">Compare project proteins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/compare_proteins.html#full-protein-level-comparison">Full protein-level comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/compare_proteins.html#pairwise-protein-level-comparison">Pairwise protein-level comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/compare_proteins.html#pairwise-peptide-level-comparison">Pairwise peptide-level comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../protein_identification/compare_proteins.html#saving-a-comparison">Saving a comparison</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Quantification</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="peptide_quantification.html">Peptide Quantification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="peptide_quantification.html#data-import-from-search-results-file">Data import from search results file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peptide_quantification.html#data-extraction-from-lc-ms-file-with-masschroq">Data extraction from LC/MS file with MassChroQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="peptide_quantification.html#managing-mzxml-files">Managing mzXML files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="peptide_quantification.html#running-xic-extraction">Running XIC extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="peptide_quantification.html#virtual-ghost-peptides-and-proteins">Virtual/Ghost peptides and proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="peptide_quantification.html#displaying-peptide-quantification-data">Displaying peptide quantification data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Protein Quantification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#absolute-abundance-quantification">Absolute abundance quantification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#empai-label-free">emPAI (label-free)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sin-label-free">SIn (label-free)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maxquant-intensity-lfq-ibaq">MaxQuant: Intensity, LFQ, iBAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#displaying-single-abundance-quantification-data">Displaying single abundance quantification data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#relative-abundance-quantification">Relative abundance quantification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#single-analysis-quantification-labeled">Single-Analysis quantification (labeled)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#design-based-quantifications">Design-based quantifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#displaying-relative-abundance-quantification-data">Displaying relative abundance quantification data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#label-free-quantifications">Label-free quantifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tnpq">TnPQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-multiple-protein-quantifications">Comparing multiple protein quantifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exporting-multiple-quantifications">Exporting multiple quantifications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ptms_quantification.html">PTMs quantification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ptms_quantification.html#set-ptms-relevance-to-project">Set PTMs relevance to project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ptms_quantification.html#display-modification-sites-distribution">Display modification sites distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ptms_quantification.html#compare-ptms-between-projects">Compare PTMs between projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ptms_quantification.html#quantify-modification-sites">Quantify modification sites</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Data Analysis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data_analysis/exploratory_analysis.html">Exploratory analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#launching-exploratory-analyses-on-protein-quantification">Launching exploratory analyses on protein quantification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#launching-exploratory-analyses-on-peptides-count">Launching exploratory analyses on peptides count</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#principal-component-analysis-pca">Principal Component Analysis (PCA)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#summary-edit-delete">Summary / edit / delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#displaying-a-pca">Displaying a PCA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#d-clustering">2D-Clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#id1">Summary / edit / delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#displaying-clustering">Displaying clustering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_analysis/functional_analysis.html">Functional analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/functional_analysis.html#gene-ontology">Gene Ontology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#go-summary">GO summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#go-enrichment-analysis">GO enrichment analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#quantitative-gene-enrichment-analysis">Quantitative gene enrichment analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/functional_analysis.html#pathway-enrichment">Pathway enrichment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#launch-pathway-analysis">Launch pathway analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#summary-edit-delete">Summary / edit / delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#displaying-pathway-analysis">Displaying pathway analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#export">Export</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/functional_analysis.html#motif-enrichment-analysis">Motif enrichment analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#launch-analysis">Launch analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#summary-editing-deleting">Summary/editing/deleting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#displaying-motif-enrichment">Displaying motif enrichment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#heatmap-motif-analysis">Heatmap motif analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">myProMS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Protein Quantification</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/docs/quantification/protein_quantification.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="protein-quantification">
+<h1>Protein Quantification<a class="headerlink" href="#protein-quantification" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="absolute-abundance-quantification">
+<h2>Absolute abundance quantification<a class="headerlink" href="#absolute-abundance-quantification" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="empai-label-free">
+<h3>emPAI (label-free)<a class="headerlink" href="#empai-label-free" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>E</strong>xponentially <strong>M</strong>odified <strong>P</strong>rotein <strong>A</strong>bundance <strong>I</strong>ndex (emPAI) is a spectral-count method that estimates the relative quantitation of proteins in a complex mixture<a class="footnote-reference" href="#id6" id="id1">[1]</a> based on protein coverage by peptide matches. myProMS uses the built-in implementation of the Mascot server 2.3 software which is a slightly modified version of the original emPAI value (for more details, have a look to <a class="reference external" href="http://www.matrixscience.com/help/quant_empai_help.html">mascot help</a> ). As this value is retrieved from Mascot web-server, this label-free method can only be applied to Analyses generated from Mascot DAT files directly imported from a connected Mascot server.</p>
+</div>
+<div class="section" id="sin-label-free">
+<h3>SIn (label-free)<a class="headerlink" href="#sin-label-free" title="Permalink to this headline">¶</a></h3>
+<p>The Spectral Index Normalized (SIn) is a normalized label-free quantitative method which combines three abundance features : peptide and spectral count with fragment-ion (MS/MS) intensity<a class="footnote-reference" href="#id7" id="id2">[2]</a> . This label-free method is currently available only for Analyses generated from Mascot DAT files. Support for other search results formats is plan in future versions of myProMS.</p>
+</div>
+<div class="section" id="maxquant-intensity-lfq-ibaq">
+<h3>MaxQuant: Intensity, LFQ, iBAQ<a class="headerlink" href="#maxquant-intensity-lfq-ibaq" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="displaying-single-abundance-quantification-data">
+<h3>Displaying single abundance quantification data<a class="headerlink" href="#displaying-single-abundance-quantification-data" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="relative-abundance-quantification">
+<h2>Relative abundance quantification<a class="headerlink" href="#relative-abundance-quantification" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="single-analysis-quantification-labeled">
+<h3>Single-Analysis quantification (labeled)<a class="headerlink" href="#single-analysis-quantification-labeled" title="Permalink to this headline">¶</a></h3>
+<p>If a labeled Analysis has to be quantified, labeling parameters and all peptide XIC data should be readily available in the corresponding search results file. Therefore, a straightforward protein quantification can be performed as follow: Go to the <code class="docutils literal notranslate"><span class="pre">Analysis</span> <span class="pre">Quantification</span></code> options (<code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">Analyses</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Analysis</span> <span class="pre">Quantification</span></code>) and click on <code class="docutils literal notranslate"><span class="pre">Proceed</span></code> next to the <code class="docutils literal notranslate"><span class="pre">(SILAC/iTRAQ)-based</span> <span class="pre">quantification</span></code> process to display the quantification form shown below.</p>
+<img alt="../../_images/silac_quanti_settings.png" src="../../_images/silac_quanti_settings.png" />
+<ul>
+<li><p class="first"><strong>Name</strong> : A name for the quantification.</p>
+</li>
+<li><p class="first"><strong>Labeled states</strong> : Select the different conditions to be compared. Available labeled states are identified based on labeling design extracted from the search result file. Each condition defined will be used as a reference for the following one(s). 1 state is usually associated with 1 condition. However, if more than 2 states are identified (e.g. iTRAQ 4/8-plex) an additional option will be displayed for grouping different states as replicates of the same condition. In addition, if more than 2 conditions are defined, all corresponding ratios will be calculated except reverse ratios (cond B/cond A but not cond A/cond B).</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible to quantify multiple Analyses at once. Make sure they share identical labeling design. If not, they should be quantified separately.</p>
+</div>
+<p>Multiple filter can be apply on Peptide selection:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Specificity : Whether to restrict quantification to proteotypic peptides or not.</li>
+<li>Missed cleav. : Include or not miss-cleaved peptides.</li>
+<li>PTMs : Peptides with sequence modification can be allowed, not allowed or extend exclusion to corresponding non-modified peptide.</li>
+<li>Charges : Include all charge states of a peptide set or restrict to set that gives the best signal (set containing peptide with highest XIC value).</li>
+<li>Sources : If the search results files is a merge of multiple LC/MS runs (e.g. Proteome Discoverer), use peptide sets from all runs or use only the one with best signal.</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>Quantification settings</strong> : Additional options are available to control experimental bias, outliers detection and differential analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Bias correction</strong> : Select whether to correct or not for signal bias between label states and which method to apply: If <code class="docutils literal notranslate"><span class="pre">Scale</span> <span class="pre">normalization</span></code> is selected, the assumption is made that the total XIC signal between all states should be equal. Alternatively if <code class="docutils literal notranslate"><span class="pre">Reference</span> <span class="pre">protein(s)</span></code> is selected, a pre-recorded List of proteins must be provided. When using this option, it is assumed that a subset of proteins (e.g. House keeping proteins) is unchanged amongst all states and therefore only the sums of the XICs matching these proteins are set equal. In both cases, a state-specific correction factor is computed and applied to each individual peptide XIC.</li>
+<li><strong>Avoid infinite ratios</strong> : Infinite ratios (log values) can occur when XIC values are missing in 1 of the 2 conditions being compared. When a mixture of normal and infinite peptide ratios exists for the same protein, myProMS must either use the most abundant type of ratios to quantify the protein (e.g. set protein ratio to +/-infinite (log values) if more than 50% of matching peptides have infinite log ratios) or only use the “normal” ratios even if they are less frequent that the infinite ones (to <strong>avoid infinite ratios whenever possible</strong>). This later option is automatically selected if more than 2 conditions are compared to prevent excessive data exclusion.</li>
+<li><strong>More advanced settings</strong> can be used for <strong>outlier</strong> detection, comparison hypothesis test (Two-sided/Lesser/Greater), <strong>FDR</strong> control, …</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Finally, select the analysi(e)s to be quantified. If multiple peptide quantification datasets are available for an Analysis, one must be selected. Click on the <code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">Quantification</span></code> button. Multiple quantifications will be queued and processed as up to 3 parallel jobs. As described above for <a class="reference internal" href="peptide_quantification.html#peptide-quantification"><span class="std std-ref">Peptide Quantification</span></a>, a popup window will appear with the list of all jobs launched with their progress status.</p>
+</div>
+<div class="section" id="design-based-quantifications">
+<h3>Design-based quantifications<a class="headerlink" href="#design-based-quantifications" title="Permalink to this headline">¶</a></h3>
+<p>The use of a design for a quantification is highly recommended, even if it requires only single labeled analysis. It is mandatory to create a design for a quantification that requires more than 1 analysis. Designs are automatically generated when importing protein quantification data from  MaxQuant analyses.</p>
+<p>Conditions</p>
+<p>Observations</p>
+</div>
+<div class="section" id="displaying-relative-abundance-quantification-data">
+<h3>Displaying relative abundance quantification data<a class="headerlink" href="#displaying-relative-abundance-quantification-data" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="label-free-quantifications">
+<h2>Label-free quantifications<a class="headerlink" href="#label-free-quantifications" title="Permalink to this headline">¶</a></h2>
+<p>Label-free quantifications are methods that allow to determine the relative amount of proteins in two or more biological samples without any use of stable isotope or chemical tag. It is based on precursor signal intensity or the number of spectra made for each peptide of a protein.
+Here is a brief description of several methods available in myProMS that you can use from top panel button <code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">Analyses</span></code> and then, <code class="docutils literal notranslate"><span class="pre">Analysis</span> <span class="pre">Quantification</span></code>.</p>
+<div class="section" id="tnpq">
+<h3>TnPQ<a class="headerlink" href="#tnpq" title="Permalink to this headline">¶</a></h3>
+<p>Silva et al. showed in their work<a class="footnote-reference" href="#id8" id="id3">[3]</a> on a Q-ToF type instrument that it is possible to quantify unknown protein samples with a known unified signal response factor in absolute manner . Then, the <strong>T</strong>op <strong>3</strong> <strong>P</strong>rotein <strong>Q</strong>uantification<a class="footnote-reference" href="#id9" id="id4">[4]</a> extended this method to ion trap instruments. The method premises that for each protein identified by a set of peptides, the average of the three most efficiently ionized and therefore highest MS signals directly correlated with the input amount of the corresponding  protein. In myProMS, we extended this definition to “all available peptides” for a given protein and called it TnPQ.</p>
+<img alt="../../_images/tnpq_quanti_settings.png" src="../../_images/tnpq_quanti_settings.png" />
+<p>Steps involved in TnPQ computation:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Retrieval of all available XICs (area) of each peptide of the protein for all conditions</p>
+</li>
+<li><p class="first">Removal of incomplete peptide information i.e. peptide with no XIC information in at least one of the replicates of a condition will be removed</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">when creating a quantification, avoid to add too many conditions because you will lose a lot of peptide information given the fact that all conditions must provide a XIC for a peptide to be considered more further</p>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">If a bias correction setting was selected (scale or reference protein normalization), a normalization step is introduced by computing bias estimates on unique peptides <a class="footnote-reference" href="#id10" id="id5">[5]</a> . All XIC are divided by those bias factors.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If None was chosen, nothing is done to the data</p>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Removal of extreme XIC values (outliers) based on the coefficient of variation (standard deviation divided by the mean) of all identified peptides along the replicates in the conditions.</p>
+</li>
+<li><p class="first">Compute for each protein the geometrical mean of peptide XICs</p>
+</li>
+<li><p class="first">Quality control of the data (normality test on the data and variance sameness)</p>
+</li>
+<li><p class="first">Compute the ratio between paired conditions and make a test to assess equality of mean depending on the design made before</p>
+<blockquote>
+<div><ul class="simple">
+<li>For 2 conditions : use Student t-test comparison (or Welch t-test if variance are not the same)</li>
+<li>For more than 2 conditions : use Tuckey HSD (honestly significant difference) test</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">If chosen, adjust p-values to control FDR level</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="comparing-multiple-protein-quantifications">
+<h2>Comparing multiple protein quantifications<a class="headerlink" href="#comparing-multiple-protein-quantifications" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="exporting-multiple-quantifications">
+<h2>Exporting multiple quantifications<a class="headerlink" href="#exporting-multiple-quantifications" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/exporting_quantifications.png" src="../../_images/exporting_quantifications.png" />
+<ul>
+<li><p class="first">For the explanation of all features see section “Exploratory analyses” except for the following item:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Gene Name : transform all protein name in gene name (&lt;which?geneID/unigene&gt;).</p>
+</li>
+<li><p class="first">Keep most changing proteins between:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sample: For a given isoform (or protein), a standard deviation is calculated for all selected sample and only the isoform (or protein) with the best value is kept. The standard deviation is a measure that is used to quantify the amount of variation or dispersion of a set of data values.</li>
+<li>Group: For a given isoform (or protein), an Anova is applied, a p-value is calculated between group. Analysis of variance (ANOVA) is a collection of statistical models and their associated procedures (such as “variation” among and between groups) used to analyze the differences among group.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">After clicking on <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">dataset</span></code> button, a compressed directory is downloaded which contains following file :</p>
+<blockquote>
+<div><ul>
+<li><p class="first">R_parameter.txt: all the parameters used by the statistical analysis.</p>
+<blockquote>
+<div><img alt="../../_images/export_r_parameter_file.png" src="../../_images/export_r_parameter_file.png" />
+</div></blockquote>
+</li>
+<li><p class="first">parameter.txt: all the parameters used for data filtering.</p>
+<blockquote>
+<div><img alt="../../_images/export_parameter_file.png" src="../../_images/export_parameter_file.png" />
+</div></blockquote>
+</li>
+<li><p class="first">matrix_pvalue_processed.txt:</p>
+<blockquote>
+<div><img alt="../../_images/export_matrix_pvalue_processed_file.png" src="../../_images/export_matrix_pvalue_processed_file.png" />
+</div></blockquote>
+</li>
+<li><p class="first">matrix_pep_processed.txt: peptide number</p>
+<blockquote>
+<div><img alt="../../_images/export_matrix_pep_processed_file.png" src="../../_images/export_matrix_pep_processed_file.png" />
+</div></blockquote>
+</li>
+<li><p class="first">matrix_log2ratio_processed.txt:</p>
+<blockquote>
+<div><img alt="../../_images/export_matrix_log2ratio_processed_file.png" src="../../_images/export_matrix_log2ratio_processed_file.png" />
+</div></blockquote>
+</li>
+<li><p class="first">annotation_processed.txt:</p>
+<blockquote>
+<div><img alt="../../_images/export_annotation_processed_file.png" src="../../_images/export_annotation_processed_file.png" />
+</div></blockquote>
+</li>
+<li><p class="first">sd.txt: standard deviation value (between sample)</p>
+<blockquote>
+<div><img alt="../../_images/export_sd_file.png" src="../../_images/export_sd_file.png" />
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>emPAI : <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/15958392">Hishima et al, Mol Cell Proteomics, 2005</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>SIn : <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2805705/">Griffin NM et al, Nat Biotechnol., 2009</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>TnPQ : <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/16219938">Silva et al, Mol Cell Proteomics, 2006</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>T3PQ : <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/20576481">Grossmann et al, J Proteomics, 2010</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>TnPQ bias correction (scale normalization part) : <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC100354/">Yang et al. 2002</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ptms_quantification.html" class="btn btn-neutral float-right" title="PTMs quantification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="peptide_quantification.html" class="btn btn-neutral float-left" title="Peptide Quantification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Patrick Poullet, Valentin Sabatet, Victor Laigle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

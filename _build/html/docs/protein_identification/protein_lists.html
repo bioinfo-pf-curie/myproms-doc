@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Protein lists &mdash; myProMS  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Search for proteins" href="search_proteins.html" />
+    <link rel="prev" title="Validated proteins" href="validated_proteins.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> myProMS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#git-repository">Git Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installation.html#docker-deployment">Docker deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/server_architecture.html">Server Architecture</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Server Management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/users_management.html">Users management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/users_management.html#user-classes-and-access-privileges">User classes and access privileges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/users_management.html#account-management">Account management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/annotation_data.html">Annotation data management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#sequence-databanks">Sequence databanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#databank-types">Databank types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#listing-databanks">Listing databanks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#adding-a-new-databank">Adding a new databank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#editing-a-databank">Editing a databank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#deleting-a-databank">Deleting a databank</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#spectral-swath-libraries-management">Spectral (SWATH) libraries management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#listing-spectral-libraries">Listing spectral libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#adding-a-new-library">Adding a new library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#merging-two-library">Merging two library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#editing-a-library">Editing a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#updating-a-library">Updating a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#restoring-the-previous-version-of-a-library">Restoring the previous version of a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#searching-for-proteins-in-a-library">Searching for proteins in a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#exporting-a-library">Exporting a library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#deleting-a-spectral-library">Deleting a spectral library</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#go-files-management">GO files management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#ontology-files">Ontology files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#annotation-files">Annotation files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#species">Species</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#listing-species">Listing species</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#adding-or-editing-a-species">Adding or editing a species</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#deleting-a-species">Deleting a species</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server_management/annotation_data.html#sequence-modifications">Sequence modifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server_management/annotation_data.html#editing-or-merging-ptms">Editing or merging PTMs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server_management/server_administration.html">Server administration</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Project management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/project_settings.html">Projects settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#selection">Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#creation">Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#accessibility">Accessibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#organization">Organization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/project_settings.html#experiments"><strong>Experiments</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/project_settings.html#samples"><strong>Samples</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/project_settings.html#analyses"><strong>Analyses</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/project_settings.html#life-span">Life span</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/analysis_import.html">Analysis import</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#supported-search-engines">Supported search engines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#collecting-search-files">Collecting search files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#import-parameters-mascot-proteome-discoverer-and-x-tandem">Import parameters (Mascot, Proteome Discoverer and X!Tandem)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#importing-maxquant-data">Importing MaxQuant data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#import-dia-data">Import DIA data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#from-peakview">From PeakView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#from-openswath">From OpenSWATH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#running-openswath-quantification">Running OpenSWATH quantification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_import.html#from-spectronaut">From Spectronaut</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_import.html#analysis-summary">Analysis summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/analysis_validation.html">Analysis validation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#automated-peptide-protein-validation">Automated peptide/protein validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#fdr-false-discovery-rate-based-validation">FDR (False discovery rate) - based validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#qualitative-validation">Qualitative validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#comparative-validation">Comparative validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#validation-templates">Validation templates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#manual-peptide-protein-validation">Manual peptide/protein validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#peptides-selection-exclusion">Peptides selection/exclusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#protein-exclusion-and-filtering">Protein exclusion and filtering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#lower-scoring-peptides-activation">Lower-scoring peptides activation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#clear-peptide-protein-selections">Clear peptide/protein selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#sequence-modification-validation">Sequence modification validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#phosphorylation-sites-validation-with-phosphors">Phosphorylation sites validation with PhosphoRS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../project_management/analysis_validation.html#manual-validation-of-modifications">Manual validation of modifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#validation-traceability">Validation traceability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/analysis_validation.html#reporting">Reporting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project_management/biological_samples.html">Biological Samples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#properties">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#treatments">Treatments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#recording-a-biological-sample">Recording a biological sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project_management/biological_samples.html#linking-biological-samples-to-ms-analyses">Linking biological samples to MS Analyses</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Protein Identification</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="validated_proteins.html">Validated proteins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="validated_proteins.html#match-groups-and-protein-visibility">Match groups and protein visibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="validated_proteins.html#top-protein-selection-rules">Top protein selection rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="validated_proteins.html#project-wide-protein-visibility-rules">Project-wide protein visibility rules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="validated_proteins.html#checking-for-conflicting-match-groups">Checking for conflicting match groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="validated_proteins.html#displaying-match-group-composition">Displaying match group composition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="validated_proteins.html#manual-edition">Manual edition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="validated_proteins.html#peptide-distribution-in-match-group">Peptide distribution in match group</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="validated_proteins.html#identifier-mapping">Identifier mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validated_proteins.html#single-protein-view">Single protein view</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Protein lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-based-protein-lists">Project-based protein lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-defined-protein-lists">User-defined protein lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-protein-lists">Export protein lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_proteins.html">Search for proteins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compare_proteins.html">Compare project proteins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compare_proteins.html#full-protein-level-comparison">Full protein-level comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare_proteins.html#pairwise-protein-level-comparison">Pairwise protein-level comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare_proteins.html#pairwise-peptide-level-comparison">Pairwise peptide-level comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compare_proteins.html#saving-a-comparison">Saving a comparison</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Quantification</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quantification/peptide_quantification.html">Peptide Quantification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/peptide_quantification.html#data-import-from-search-results-file">Data import from search results file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/peptide_quantification.html#data-extraction-from-lc-ms-file-with-masschroq">Data extraction from LC/MS file with MassChroQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/peptide_quantification.html#managing-mzxml-files">Managing mzXML files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/peptide_quantification.html#running-xic-extraction">Running XIC extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/peptide_quantification.html#virtual-ghost-peptides-and-proteins">Virtual/Ghost peptides and proteins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/peptide_quantification.html#displaying-peptide-quantification-data">Displaying peptide quantification data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantification/protein_quantification.html">Protein Quantification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/protein_quantification.html#absolute-abundance-quantification">Absolute abundance quantification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#empai-label-free">emPAI (label-free)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#sin-label-free">SIn (label-free)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#maxquant-intensity-lfq-ibaq">MaxQuant: Intensity, LFQ, iBAQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#displaying-single-abundance-quantification-data">Displaying single abundance quantification data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/protein_quantification.html#relative-abundance-quantification">Relative abundance quantification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#single-analysis-quantification-labeled">Single-Analysis quantification (labeled)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#design-based-quantifications">Design-based quantifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#displaying-relative-abundance-quantification-data">Displaying relative abundance quantification data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/protein_quantification.html#label-free-quantifications">Label-free quantifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../quantification/protein_quantification.html#tnpq">TnPQ</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/protein_quantification.html#comparing-multiple-protein-quantifications">Comparing multiple protein quantifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/protein_quantification.html#exporting-multiple-quantifications">Exporting multiple quantifications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quantification/ptms_quantification.html">PTMs quantification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/ptms_quantification.html#set-ptms-relevance-to-project">Set PTMs relevance to project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/ptms_quantification.html#display-modification-sites-distribution">Display modification sites distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/ptms_quantification.html#compare-ptms-between-projects">Compare PTMs between projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quantification/ptms_quantification.html#quantify-modification-sites">Quantify modification sites</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Data Analysis</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../data_analysis/exploratory_analysis.html">Exploratory analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#launching-exploratory-analyses-on-protein-quantification">Launching exploratory analyses on protein quantification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#launching-exploratory-analyses-on-peptides-count">Launching exploratory analyses on peptides count</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#principal-component-analysis-pca">Principal Component Analysis (PCA)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#summary-edit-delete">Summary / edit / delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#displaying-a-pca">Displaying a PCA</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#d-clustering">2D-Clustering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#id1">Summary / edit / delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/exploratory_analysis.html#displaying-clustering">Displaying clustering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_analysis/functional_analysis.html">Functional analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/functional_analysis.html#gene-ontology">Gene Ontology</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#go-summary">GO summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#go-enrichment-analysis">GO enrichment analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#quantitative-gene-enrichment-analysis">Quantitative gene enrichment analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/functional_analysis.html#pathway-enrichment">Pathway enrichment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#launch-pathway-analysis">Launch pathway analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#summary-edit-delete">Summary / edit / delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#displaying-pathway-analysis">Displaying pathway analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#export">Export</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/functional_analysis.html#motif-enrichment-analysis">Motif enrichment analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#launch-analysis">Launch analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#summary-editing-deleting">Summary/editing/deleting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#displaying-motif-enrichment">Displaying motif enrichment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_analysis/functional_analysis.html#heatmap-motif-analysis">Heatmap motif analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">myProMS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Protein lists</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/docs/protein_identification/protein_lists.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="protein-lists">
+<h1>Protein lists<a class="headerlink" href="#protein-lists" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="project-based-protein-lists">
+<span id="project-lists"></span><h2>Project-based protein lists<a class="headerlink" href="#project-based-protein-lists" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="user-defined-protein-lists">
+<h2>User-defined protein lists<a class="headerlink" href="#user-defined-protein-lists" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="export-protein-lists">
+<h2>Export protein lists<a class="headerlink" href="#export-protein-lists" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="search_proteins.html" class="btn btn-neutral float-right" title="Search for proteins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="validated_proteins.html" class="btn btn-neutral float-left" title="Validated proteins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Patrick Poullet, Valentin Sabatet, Victor Laigle
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

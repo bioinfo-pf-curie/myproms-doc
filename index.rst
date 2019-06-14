@@ -1,5 +1,8 @@
-Welcome to myproms' documentation!
-===================================
+.. image:: img/myproms_logo.gif
+
+
+Welcome to the myProMS documentation !
+======================================
 
 .. toctree::
 	:maxdepth: 3
@@ -13,9 +16,10 @@ Welcome to myproms' documentation!
 .. toctree::
 	:maxdepth: 3
 	:caption: Server Management
-	:hidden:
    
 	docs/server_management/users_management
+	docs/server_management/annotation_data
+	docs/server_management/server_administration
 
 	
 .. toctree::
@@ -25,22 +29,34 @@ Welcome to myproms' documentation!
 	docs/project_management/project_settings
 	docs/project_management/analysis_import
 	docs/project_management/analysis_validation
+	docs/project_management/biological_samples
 
 	
 .. toctree::
 	:maxdepth: 3
 	:caption: Protein Identification
+	
+	docs/protein_identification/validated_proteins
+	docs/protein_identification/protein_lists
+	docs/protein_identification/search_proteins
+	docs/protein_identification/compare_proteins
 
 	
 .. toctree::
 	:maxdepth: 3
 	:caption: Quantification
+	
+	docs/quantification/peptide_quantification
+	docs/quantification/protein_quantification
+	docs/quantification/ptms_quantification
 
 	
 .. toctree::
 	:maxdepth: 3
-	:caption: Data Analaysis
+	:caption: Data Analysis
 
+	docs/data_analysis/exploratory_analysis
+	docs/data_analysis/functional_analysis
 	
 .. toctree::
 	:maxdepth: 3
