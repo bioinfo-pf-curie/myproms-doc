@@ -362,11 +362,11 @@ In this mode, you can update the description or the delta-mass of this PTM. A li
 
 The option ``Merge with`` gives the opportunity to merge two PTMs into one single entry. This could be useful if you wish to give an alternative name to a modification. Select the modification you want to merge with the current PTM and click on ``Save``. This action will add the name of the current modification to the list of alternative names of the one selected.
 
-For PTMs that you want to make appear in your projects and give special attention to, you need to enter a code (usually, a single letter) and a color. Those PTMs will become relevant and will be choosable in every project you manage.
+For PTMs that you want to make appear in your projects and give special attention to, you need to enter a code (usually, a single letter) and a color. Those PTMs will become relevant and will be selectable in every project you manage.
 
 Here is a list of relevant PTMs and their associated code-color designation:
 
 .. image:: img/list_relevant_modifications.png
 
 .. note::
-	For more information on that topic, please, see :ref:`project_creation`.
+	For more information on that topic, please, see Project :ref:`project_creation`.

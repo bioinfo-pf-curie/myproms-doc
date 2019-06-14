@@ -1,8 +1,10 @@
 .. image:: img/myproms_logo.gif
 
+|br|
 
-Welcome to the myProMS documentation !
-======================================
+.. |br| raw:: html
+
+    <br>
 
 .. toctree::
 	:maxdepth: 3
