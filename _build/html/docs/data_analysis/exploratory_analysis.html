@@ -388,16 +388,13 @@ They can be launch on <strong>protein quantification</strong> or <strong>peptide
 <p>First select the Experiment containing the dataset to analyze. Then click on the <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Exploratory</span> <span class="pre">Analyses</span></code> button.
 The following form will be displayed:</p>
 <img alt="../../_images/exploratory_analysis_protein_settings.png" src="../../_images/exploratory_analysis_protein_settings.png" />
-<ul>
-<li><p class="first"><strong>Name</strong>: Provide a name for the PCA and/or the clustering analysis. The analysis is saved and can be retrieved by this name in the Exploratory analyses tree displayed in the sub-navigation frame.</p>
-</li>
-<li><p class="first"><strong>Focus</strong>: 3 types of data can be analyze, Proteins, Proteins modifications (phosphorylation , acetylation….) and Normalized proteins modifications.</p>
-</li>
-<li><p class="first"><strong>Features</strong>: run exploratory analysis on Protein quantifications or Peptide count.</p>
-</li>
-<li><p class="first"><strong>Quantification type</strong>: Select one the protein quantification methods available as listed below:</p>
-<blockquote>
-<div><table border="1" class="docutils">
+<ul class="simple">
+<li><strong>Name</strong>: Provide a name for the PCA and/or the clustering analysis. The analysis is saved and can be retrieved by this name in the Exploratory analyses tree displayed in the sub-navigation frame.</li>
+<li><strong>Focus</strong>: 3 types of data can be analyze, Proteins, Proteins modifications (phosphorylation , acetylation….) and Normalized proteins modifications.</li>
+<li><strong>Features</strong>: run exploratory analysis on Protein quantifications or Peptide count.</li>
+<li><strong>Quantification type</strong>: Select one the protein quantification methods available as listed below:</li>
+</ul>
+<table border="1" class="align-center docutils">
 <colgroup>
 <col width="64%" />
 <col width="36%" />
@@ -431,29 +428,23 @@ The following form will be displayed:</p>
 </tr>
 </tbody>
 </table>
-</div></blockquote>
-</li>
-<li><p class="first"><strong>Data transform</strong>: by default data are not logged, user can transform data in log2 or log10. This is critical, in particular for protein ratio in order to make ratio data symmetrical and centered on 1 (0 in log mode)</p>
-</li>
-<li><p class="first"><strong>Data filtering</strong>:
+<ul class="simple">
+<li><strong>Data transform</strong>: by default data are not logged, user can transform data in log2 or log10. This is critical, in particular for protein ratio in order to make ratio data symmetrical and centered on 1 (0 in log mode)</li>
+<li><strong>Data filtering</strong>:
 - Abs. fold change in at least n quantifications (only for protein ratio): Only proteins with an absolute fold change (before log) greater than or equal to the value provided found in at least n quantifications will be kept .
 - Infinite ratios (only for protein ratio): choose how to deal with infinite ratios.
 - p-value in at least n quantifications (only for protein ratio): Only proteins with p-value lesser than or equal to the value provided found in n quantifications will be kept.
 - Peptides: Select the counting method: All, Distinct, Razor, … (the exact list of available options depends of the quantification method selected) and the minimum value allowed in a quantification to consider the protein to be present or absent.
 - Missing values: choose how to deal with missing values. Different options are available: None allowed, Allow x%, Allow all. Value is per individual proteins across dataset. Proteins with more missing values than allowed will be excluded.
 - Exclude ambiguous site (only for modifications proteins): exclude or not sites with ambiguous (uncertain) modification position (ambiguous site contains “~” eg, xxx-254~262:1/5).
-- Aggregate (by best modifications sites, only for modifications proteins): keep only 1 modification site per protein (gene). The site with the highest variance across the dataset will be kept as a proxy for the whole protein (gene).</p>
-</li>
-<li><p class="first"><strong>Protein filtering</strong>:
+- Aggregate (by best modifications sites, only for modifications proteins): keep only 1 modification site per protein (gene). The site with the highest variance across the dataset will be kept as a proxy for the whole protein (gene).</li>
+<li><strong>Protein filtering</strong>:
 - Custom list: by default all proteins that passed above filters are used for the analysis. It is also possible to focus only or exclude a set of proteins based on the custom list selected.
-- Keep n most changing proteins: Only the n proteins with highest variance across the dataset will be kept.</p>
-</li>
-<li><p class="first"><strong>Clustering parameters</strong>: choose the method and the metric parameters (default method is “Ward” and metric is “pearson”)</p>
-</li>
-<li><p class="first"><strong>Data selection</strong>: choose the quantifications to analyze.
+- Keep n most changing proteins: Only the n proteins with highest variance across the dataset will be kept.</li>
+<li><strong>Clustering parameters</strong>: choose the method and the metric parameters (default method is “Ward” and metric is “pearson”)</li>
+<li><strong>Data selection</strong>: choose the quantifications to analyze.
 -       Auto-extend selection: after selecting a quantification, all the following ones are automatically selected (or unselected).
--       Copy selection: copy the dataset used in a previously performed exploratory analysis.</p>
-</li>
+-       Copy selection: copy the dataset used in a previously performed exploratory analysis.</li>
 </ul>
 </div>
 <div class="section" id="launching-exploratory-analyses-on-peptides-count">

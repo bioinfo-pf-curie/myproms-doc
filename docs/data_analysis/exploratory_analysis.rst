@@ -19,27 +19,29 @@ The following form will be displayed:
 -	**Features**: run exploratory analysis on Protein quantifications or Peptide count.
 -	**Quantification type**: Select one the protein quantification methods available as listed below:
 
-		+------------------------------------------------+
-		| Quantification type for protein quantification |
-		+==============================+=================+
-		| emPAI                        | emPAI           |
-		+                              +-----------------+
-		|                              | emPAI (Mol %)   |
-		+                              +-----------------+
-		|                              | emPAI (Mr %)    |
-		+------------------------------+-----------------+
-		| MaxQuant Intensities         | Intensities     |
-		+                              +-----------------+
-		|                              | iBAQ            |
-		+                              +-----------------+
-		|                              | LFQ             |
-		+                              +-----------------+
-		|                              | MS/MS count     |
-		+------------------------------+-----------------+
-		| Normalized spectral index    | SIN             |
-		+------------------------------+-----------------+
-		| Protein ratio                | Protein ratio   |
-		+------------------------------+-----------------+
+.. rst-class:: align-center
+
++------------------------------------------------+
+| Quantification type for protein quantification |
++==============================+=================+
+| emPAI                        | emPAI           |
++                              +-----------------+
+|                              | emPAI (Mol %)   |
++                              +-----------------+
+|                              | emPAI (Mr %)    |
++------------------------------+-----------------+
+| MaxQuant Intensities         | Intensities     |
++                              +-----------------+
+|                              | iBAQ            |
++                              +-----------------+
+|                              | LFQ             |
++                              +-----------------+
+|                              | MS/MS count     |
++------------------------------+-----------------+
+| Normalized spectral index    | SIN             |
++------------------------------+-----------------+
+| Protein ratio                | Protein ratio   |
++------------------------------+-----------------+
 
 -	**Data transform**: by default data are not logged, user can transform data in log2 or log10. This is critical, in particular for protein ratio in order to make ratio data symmetrical and centered on 1 (0 in log mode)
 -	**Data filtering**:

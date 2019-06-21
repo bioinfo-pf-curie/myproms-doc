@@ -1,3 +1,7 @@
+.. |br| raw:: html
+
+    <br>
+
 .. _peptide_quantification:
 
 Peptide Quantification
@@ -57,7 +61,8 @@ In the first part of the form, multiple parameters can be set for the extraction
 
 		.. image:: img/run_silac.jpg
 
-
+		|br|
+		
 		.. note::
 			Your modification is not selectable in the modification target option ? Check the status of the modification (see Sequence modification section below). Maybe the modification you are using is not tagged as label. If not, change this and save it by editing the modification.
 	

@@ -43,27 +43,29 @@ Multiple databank types are available in *myProMS* depending on the proteomic re
 	:courier:`>gi|125987826|sp|P15311|EZRI_HUMAN Ezrin (p81) (Cytovillin) (Villin-2) [Homo sapiens (Human)]`
 
 .. rst-class: align-center
-	+--------------------+-----------------------------------+---------------+
-	|                    | **NCBInr - ALL**                  | **NCBI - GI** |
-	+--------------------+-----------------------------------+---------------+
-	| Protein identifier | gi|125987826|sp|P15311|EZRI_HUMAN | gi|125987826  |
-	+--------------------+-----------------------------------+---------------+
-	| Description        | Ezrin (p81) (Cytovillin) (Villin-2)               |
-	+--------------------+---------------------------------------------------+
-	| Species            | Homo sapiens                                      |
-	+--------------------+---------------------------------------------------+
+
++--------------------+-----------------------------------+---------------+
+|                    | **NCBInr - ALL**                  | **NCBI - GI** |
++--------------------+-----------------------------------+---------------+
+| Protein identifier | gi|125987826|sp|P15311|EZRI_HUMAN | gi|125987826  |
++--------------------+-----------------------------------+---------------+
+| Description        | Ezrin (p81) (Cytovillin) (Villin-2)               |
++--------------------+---------------------------------------------------+
+| Species            | Homo sapiens                                      |
++--------------------+---------------------------------------------------+
 
 - IPI:
 	:courier:`>IPI:IPI00843975.1|SWISS-PROT:P15311| Tax_Id=9606 Gene_Symbol=EZR Ezrin``
 
 .. rst-class: align-center	
-	+--------------------+-----------------------------------+
-	| Protein identifier | IPI00843975                       |
-	+--------------------+-----------------------------------+
-	| Description        | Tax_Id=9606 Gene_Symbol=EZR Ezrin |
-	+--------------------+-----------------------------------+
-	| Species            | 9606                              |
-	+--------------------+-----------------------------------+
+
++--------------------+-----------------------------------+
+| Protein identifier | IPI00843975                       |
++--------------------+-----------------------------------+
+| Description        | Tax_Id=9606 Gene_Symbol=EZR Ezrin |
++--------------------+-----------------------------------+
+| Species            | 9606                              |
++--------------------+-----------------------------------+
 	
 .. warning::
 	The IPI resource is no longer maintained. We do not recommend using fasta files from this resource with your MS search engines.
@@ -72,13 +74,14 @@ Multiple databank types are available in *myProMS* depending on the proteomic re
 	This type can be used as a temporary solution for any unknown or custom fasta-compatible entry: :courier:`>pipe_separated_identifier_block any text`
 
 .. rst-class: align-center		
-	+--------------------+------------------------+
-	| Protein identifier | Whole identifier block |
-	+--------------------+------------------------+
-	| Description        | Everything else        |
-	+--------------------+------------------------+
-	| Species            | **None recorded**      |
-	+--------------------+------------------------+
+
++--------------------+------------------------+
+| Protein identifier | Whole identifier block |
++--------------------+------------------------+
+| Description        | Everything else        |
++--------------------+------------------------+
+| Species            | **None recorded**      |
++--------------------+------------------------+
 
 .. note::
 	If you need you need to handle other entries type, please contact your local *myProMS* administrator or email to ``myproms@curie.fr``.
