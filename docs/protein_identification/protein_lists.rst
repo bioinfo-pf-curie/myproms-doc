@@ -6,6 +6,7 @@ Protein lists
 Project-based protein lists
 ---------------------------
 
+.. _user_defined_lists:
 
 User-defined protein lists
 --------------------------
