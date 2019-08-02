@@ -27,6 +27,7 @@ The Proteomic Ruler yields absolute quantification values such as protein copy n
 Thus, the computation of quantification values is based on previous measures of intensities, typically ``Intensity`` or ``LFQ`` values as output by MaxQuant (see `MaxQuant: Intensity, LFQ, iBAQ`_ above). For this reason, the Proteomic Ruler is available only from a MaxQuant design, with quantifications already computed. 
 
 .. image:: img/proteomic_ruler_button.png
+	:align: center
 
 **Proteomic Ruler Type** : You can choose between three different methods of Proteomic Ruler : the ``Total Protein Approach``, the ``Histone Proteomic Ruler`` or the ``Custom Proteins Ruler``. 
 
